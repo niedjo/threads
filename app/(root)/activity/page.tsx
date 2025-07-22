@@ -38,7 +38,7 @@ const Page = async () => {
                     <span className="mr-1 text-primary-500">
                       {activity.author.name}
                     </span>
-                    replied to your
+                    replied to your thread
                   </p>
                 </article>
               </Link>
