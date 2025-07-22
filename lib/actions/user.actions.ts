@@ -72,7 +72,7 @@ export async function fetchUserPosts(userId: string) {
       model: Thread,
       populate: [
         {
-          path: "community",
+          path: "Community",
           model: Community,
           select: "name id image _id", // Select the "name" and "_id" fields from the "Community" model
         },

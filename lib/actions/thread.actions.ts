@@ -106,7 +106,7 @@ export async function deleteThread(id: string, path: string): Promise<void> {
     connectToDB();
 
     // Find the thread to be deleted (the main thread)
-    const mainThread = await Thread.findById(id).populate("author community");
+    const mainThread = await Thread.findById(id).populate("author Community");
 
     if (!mainThread) {
       throw new Error("Thread not found");
@@ -168,7 +168,7 @@ export async function fetchThreadById(threadId: string) {
         select: "_id id name image",
       }) // Populate the author field with _id and username
       .populate({
-        path: "community",
+        path: "Community",
         model: Community,
         select: "_id id name image",
       }) // Populate the community field with _id and name
